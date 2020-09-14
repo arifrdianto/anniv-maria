@@ -4,6 +4,9 @@ import Typed from "./Typed";
 import "./Blink.css";
 
 function App() {
+  const Sound = new Audio(process.env.PUBLIC_URL + "up.mp3");
+  Sound.play();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -29,7 +32,7 @@ function App() {
             "menjaga kita dalam menempuh setiap langkah perjalanan",
             "Selalu bahagia bersama-sama selamanya",
             "Jakarta, 15 September 2020 00:08 WIB",
-            "Dari suamimu ter-Ganteng :p",
+            "Dari suamimu yang ter-Ganteng :P",
           ]}
         />
       </header>

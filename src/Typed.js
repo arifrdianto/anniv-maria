@@ -5,7 +5,7 @@ export default class Typed extends React.Component {
     text: "",
     isDeleting: false,
     loopNum: 0,
-    typingSpeed: 150,
+    typingSpeed: 250,
   };
 
   componentDidMount() {
@@ -17,6 +17,7 @@ export default class Typed extends React.Component {
     const { isDeleting, loopNum, text, typingSpeed } = this.state;
     const i = loopNum % dataText.length;
     const fullText = dataText[i];
+    const Sound = new Audio(process.env.PUBLIC_URL + "typing-sound.mp3");
 
     this.setState({
       text: isDeleting
@@ -26,12 +27,14 @@ export default class Typed extends React.Component {
     });
 
     if (!isDeleting && text === fullText) {
+      Sound.pause();
       setTimeout(() => this.setState({ isDeleting: true }), 500);
     } else if (isDeleting && text === "") {
       this.setState({
         isDeleting: false,
         loopNum: loopNum + 1,
       });
+      Sound.play();
     }
 
     setTimeout(this.handleType, typingSpeed);
