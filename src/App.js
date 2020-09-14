@@ -1,23 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Typed from "./Typed";
+import "./Blink.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Typed
+          heading="Teruntuk Istriku:"
+          dataText={[
+            "Tak terasa sudah satu tahun pernikahan ini kita lewati",
+            "Kita telah melalui masa-masa suka maupun duka",
+            "Lebih saling mengenal, mengetahui kelebihan dan kekurangan masing-masing",
+            "Semoga itu yang menjadi dasar, untuk menjadi pasangan",
+            "suami istri yang saling melengkapi",
+            "dan saling menggenapi kedepannya.",
+            "Selamat anniversary yang ke-1",
+            "Dan juga...",
+            "Selamat ulang tahun istriku",
+            "Selamat menjadi ibu dari anak-anak",
+            "Berkahilah keluarga kami, keturunan kami,",
+            "jadikanlah keluarga kami",
+            "untuk saling mengajarkan tentang akhlak dan keikhlasan,",
+            "saling bisa menjaga diri disaat berjauhan",
+            "dan saling memahami.",
+            "Semoga Allah senantiasa melindungi dan",
+            "menjaga kita dalam menempuh setiap langkah perjalanan",
+            "Selalu bahagia bersama-sama selamanya",
+            "Jakarta, 15 September 2020 00:08 WIB",
+            "Dari suamimu ter-Ganteng :p",
+          ]}
+        />
       </header>
     </div>
   );

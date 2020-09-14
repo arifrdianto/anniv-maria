@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
+body {
+  font-family: "VT323", monospace;
+}
+
+h1 {
+  color: #00ff41;
+  font-weight: normal;
+  font-size: medium;
+}
+
+.center {
+  height: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+#cursor {
+  border-left: 0.1em solid #00ff41;
+  -webkit-animation: blink 0.7s steps(1) infinite;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
